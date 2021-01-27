@@ -1,0 +1,61 @@
+.bg-gradient-primary {
+  background-color: #3a2726;
+  background-image: linear-gradient(180deg,#9eacb9,#9EACB9);
+  background-size: cover;
+}
+
+.text-light {
+  color: #f8f9fc!important;
+}
+
+.sidebar-dark .nav-item .nav-link.active, .sidebar-dark .nav-item .nav-link.active i, .sidebar-dark .nav-item .nav-link:active, .sidebar-dark .nav-item .nav-link:active i, .sidebar-dark .nav-item .nav-link:focus, .sidebar-dark .nav-item .nav-link:focus i, .sidebar-dark .nav-item .nav-link:hover, .sidebar-dark .nav-item .nav-link:hover i {
+  color: #4b4b4b;
+}
+
+.sidebar-dark .nav-item .nav-link.active, .sidebar-dark .nav-item .nav-link.active i, .sidebar-dark .nav-item .nav-link:active, .sidebar-dark .nav-item .nav-link:active i, .sidebar-dark .nav-item .nav-link:focus, .sidebar-dark .nav-item .nav-link:focus i, .sidebar-dark .nav-item .nav-link:hover, .sidebar-dark .nav-item .nav-link:hover i {
+  color: #515151;
+}
+
+.sidebar-dark .nav-item .nav-link {
+  color: #666666;
+}
+
+body {
+  margin: 0;
+  font-family: Ubuntu, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #858796;
+  text-align: left;
+  background-color: #fff;
+}
+
+.custom-card {
+  margin: 1vw;
+  min-width: 20vw;
+}
+
+.left-cell {
+  width: 10vw;
+  height: 10vw;
+  max-width: 10vw;
+}
+
+.sidebar-dark .nav-item .nav-link i {
+  color: rgb(102,102,102);
+}
+
+.im-not-going-to-reuse-this-name {
+  background: url("../../assets/img/BSD%20Day%20BgBlur.png");
+  background-size: cover;
+  height: 105vh;
+  filter: brightness(148%);
+}
+
+.btn:hover, .btn:focus, .btn:active, .btn.active, .btn:active:focus, .btn:active:hover, .btn.active:focus, .btn.active:hover, .open > .btn.dropdown-toggle, .open > .btn.dropdown-toggle:focus, .open > .btn.dropdown-toggle:hover {
+  background-color: transparent;
+  color: #777777;
+  border-color: #777777;
+}
+

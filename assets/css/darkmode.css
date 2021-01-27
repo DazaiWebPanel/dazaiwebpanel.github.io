@@ -1,0 +1,119 @@
+[data-theme="dark"] {
+  background-color: #111 !important;
+  color: #eee;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #333 !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: #000 !important;
+}
+
+[data-theme="dark"] .bg-black {
+  background-color: #eee !important;
+}
+
+.navbar.navbar-light.navbar-expand.bg-white.shadow.mb-4.topbar.static-top {
+  color: rgb(84,68,60);
+}
+
+body {
+  margin: 0;
+  font-family: Ubuntu, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #9AA0AC;
+  text-align: left;
+  background-color: #fff;
+}
+
+.bg-white {
+  background-color: rgb(40,32,28)!important;
+}
+
+#wrapper #content-wrapper {
+  background-color: #262626;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.text-dark {
+  color: #e1e1e1!important;
+}
+
+.bg-gradient-primary {
+  background-color: #4e73df;
+  background-image: linear-gradient(180deg,#2d2728 10%,#2d2728);
+  background-size: cover;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #393939;
+  background-clip: border-box;
+  border: 1px solid #2D2728;
+  border-radius: .35rem;
+  padding: 0px;
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #2d2d2d;
+  border-bottom: 0px solid;
+}
+
+.text-primary {
+  color: #A1ADB9!important;
+}
+
+.sidebar-dark .nav-item .nav-link.active, .sidebar-dark .nav-item .nav-link.active i, .sidebar-dark .nav-item .nav-link:active, .sidebar-dark .nav-item .nav-link:active i, .sidebar-dark .nav-item .nav-link:focus, .sidebar-dark .nav-item .nav-link:focus i, .sidebar-dark .nav-item .nav-link:hover, .sidebar-dark .nav-item .nav-link:hover i {
+  color: #fff;
+}
+
+.custom-card {
+  margin: 1vw;
+  min-width: 20vw;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 0px solid #e3e6f0;
+}
+
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: vertical-align:middle;
+  vertical-align: middle;
+}
+
+.left-cell {
+  width: 10vw;
+  height: 10vw;
+  max-width: 10vw;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: initial;
+}
+
+.sidebar-dark .nav-item .nav-link i {
+}
+
+.im-not-going-to-reuse-this-name {
+  background: url("../../assets/img/BSD%20Day%20BgBlur.png");
+  background-size: cover;
+  height: 105vh;
+  background-color: rgba(0,0,0,1);
+  opacity: 1;
+  filter: grayscale(38%);
+}
+
