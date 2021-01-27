@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>All Guilds - Dazai Web Panel</title>
+    <title>Settings - Dazai Web Panel</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
@@ -37,12 +37,12 @@
                 <hr class="sidebar-divider my-0">
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link active" href="guilds.html"><i class="fa fa-user"></i><span>All Guilds/Servers</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="guilds.html"><i class="fa fa-user"></i><span>All Guilds/Servers</span></a></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"><a class="nav-link" href="shop.html"><i class="fa fa-shopping-cart" style="/*color: rgba(208,0,0,0.3);*/"></i><span>Shop</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="settings.html"><i class="fa fa-gear"></i><span>Settings</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="settings.html"><i class="fa fa-gear"></i><span>Settings</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
@@ -72,11 +72,39 @@
                         </ul>
                     </div>
                 </nav>
-                <div class="container" id="cards"><a href="#">
-                        <div class="card" data-aos="slide-left" style="/*border-width: 4px;*/border-radius: 26px;/*margin: 2vw;*/">
-                            <div class="card-body"><img style="width: 10%;height: 10%;background: center / contain no-repeat;" src="https://cdn.discordapp.com/icons/739559911033405592/8f17c978b1c48599ade3aad8c792ec51.png?size=128"><span style="font-size: 5vw;vertical-align: middle;padding-left: 9px;font-family: Federant, cursive;">Tet Development</span></div>
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-1">Settings</h3>
+                    <div class="card-group">
+                        <div class="card" style="width: 18rem;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 5px 5px 16px 2px rgba(0,0,0,0.25);margin: 14px;min-width: 280px;max-width: 300px;margin-bottom: 20px;">
+                            <div style="width: 100%;height: 200px;border-top-left-radius: 20px;border-top-right-radius: 20px;background: url(&quot;assets/img/BSD%20Day%20BgBlur.png&quot;);background-size: cover;"></div>
+                            <div class="card-body d-flex flex-column" style="height: 262px;">
+                                <div>
+                                    <h4 class="theme">Website Style</h4>
+                                    <h6 class="text-muted mb-2 themeDesc">You are currently using&nbsp;<strong id="whatmode">Light Mode</strong></h6>
+                                    <p id="themeText" class="themeText">Why not switch to the dark side?</p>
+                                </div><button class="btn btn-primary" data-bs-hover-animate="pulse" id="darkswitch" type="button" style="width: 50%;">Switch</button>
+                            </div>
                         </div>
-                    </a></div>
+                        <div class="card" style="width: 18rem;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 5px 5px 16px 2px rgba(0,0,0,0.25);margin: 14px;min-width: 280px;max-width: 300px;margin-bottom: 20px;">
+                            <div style="width: 100%;height: 200px;border-top-left-radius: 20px;border-top-right-radius: 20px;background: url(&quot;assets/img/BsdBG.png&quot;);background-size: cover;"></div>
+                            <div class="card-body d-flex flex-column" style="height: 262px;">
+                                <div>
+                                    <h4 class="theme">Refresh Data</h4>
+                                    <p id="themeText-1" class="themeText">Does your avatar/name not look correct? Just hit the button below!</p>
+                                </div><button class="btn btn-primary" data-bs-hover-animate="pulse" id="refreshData" type="button" style="width: 50%;">Refresh Data</button>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 5px 5px 16px 2px rgba(0,0,0,0.25);margin: 14px;min-width: 280px;max-width: 300px;margin-bottom: 20px;">
+                            <div style="width: 100%;height: 200px;border-top-left-radius: 20px;border-top-right-radius: 20px;background: url(&quot;assets/img/Dazai%20Bungo%20small.png&quot;);background-size: cover;"></div>
+                            <div class="card-body d-flex flex-column" style="height: 262px;">
+                                <div>
+                                    <h4 class="theme">Reset Settings</h4>
+                                    <p id="themeText-2" class="themeText">Something broke? Try this! (Note this will require a re-login)</p>
+                                </div><button class="btn btn-primary" data-bs-hover-animate="pulse" id="reset" type="button" style="width: 50%;">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
@@ -93,6 +121,8 @@
     <script src="assets/js/darkmode.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="assets/js/profileLoader.js"></script>
+    <script src="assets/js/refreshData.js"></script>
+    <script src="assets/js/reloadData.js"></script>
     <script src="assets/js/theme.js"></script>
 </body>
 

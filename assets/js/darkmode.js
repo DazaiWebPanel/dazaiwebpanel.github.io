@@ -1,4 +1,4 @@
-const darkSwitch = document.getElementById('darkSwitch');
+const darkSwitch = document.getElementById('darkswitch');
 let lm = Array.from(document.getElementsByTagName("link")).filter(x => x.href.includes("lightmode"))[0];
 const lmhref = lm.href + "";
 document.head.removeChild(lm);
@@ -7,9 +7,12 @@ const dmhref = dm.href + "";
 window.addEventListener('load', () => {
   if (darkSwitch) {
     initTheme();
-    darkSwitch.addEventListener('change', () => {
+    darkSwitch.addEventListener('click', () => {
+      console.log("nya");
       resetTheme();
     });
+  }else{
+    initTheme();
   }
 });
 
@@ -25,14 +28,33 @@ window.addEventListener('load', () => {
  * 'data-theme' attribute will not be set.
  * @return {void}
  */
+let currentlyUsing = document.getElementById("whatmode");
+let lore = document.getElementById("themeText");
 function initTheme() {
   const darkThemeSelected =
     localStorage.getItem('darkSwitch') !== null &&
     localStorage.getItem('darkSwitch') === 'dark';
+  
+  // darkSwitch.checked = darkThemeSelected;
 
-  darkSwitch.checked = darkThemeSelected;
-  if (!darkThemeSelected)
+
+  if (!darkThemeSelected){
     dm.href = lmhref;
+    if (currentlyUsing){
+      currentlyUsing.innerHTML = "Light Mode"
+      lore.innerHTML = "Join the Dark Side :)"
+    }
+      
+
+  }else{
+
+    if (currentlyUsing){
+      currentlyUsing.innerHTML = "Dark Mode"
+      lore.innerHTML = "Maybe this is too dark for you?"
+    }
+  }
+
+    
   // document.head.removeChild(lm);
   // document.head.removeChild(dm);
 }
@@ -45,17 +67,24 @@ function initTheme() {
  * @return {void}
  */
 function resetTheme() {
-  if (darkSwitch.checked) {
+  if (!localStorage.getItem('darkSwitch')) {
     // document.body.setAttribute('data-theme', 'dark');
     // lm = Array.from(document.getElementsByTagName("link")).filter(x => x.href.includes("lightmode"))[0];
     // if (lm)
     //   document.head.removeChild(lm);
     dm.href = dmhref;
     // document.head.innerHTML += `<link rel="stylesheet" href = "${dmhref}"`
-
+    if (currentlyUsing){
+      currentlyUsing.innerHTML = "Dark Mode"
+      lore.innerHTML = "Maybe this is too dark for you?"
+    }
     localStorage.setItem('darkSwitch', 'dark');
   } else {
     dm.href = lmhref
+    if (currentlyUsing){
+      currentlyUsing.innerHTML = "Light Mode"
+      lore.innerHTML = "Join the Dark Side :)"
+    }
     localStorage.removeItem('darkSwitch');
   }
 }
