@@ -60,6 +60,7 @@ save.addEventListener("click", async () => {
 		levelmsgs: lmsg.value,
 		beta: parseInt(document.getElementById("Smode").value) < 2 && parseInt(document.getElementById("Smode").value) >= 0 ? parseInt(document.getElementById("Smode").value) : 0,
 		id: getJsonFromUrl(window.location.href).guild,
+		prefix: document.getElementById("botPrefix").value || "daz",
 	};
 	Object.assign(gdata, parsePermissions());
 	console.log(gdata);
