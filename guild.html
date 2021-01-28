@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="assets/css/popup.css">
     <link rel="stylesheet" href="assets/css/tet.css">
     <link rel="stylesheet" href="assets/css/TextInput.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switch-1.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switch.css">
 </head>
 
 <body id="page-top">
@@ -86,10 +88,23 @@
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
                                         <div class="col mr-2">
-                                            <div class="text-uppercase text-warning font-weight-bold text-xs mb-1"><span>daz ai messages left</span></div>
+                                            <div class="text-uppercase text-warning font-weight-bold text-xs mb-1"><span style="color: rgb(126,229,100);">daz ai messages left</span></div>
                                             <div class="text-dark font-weight-bold h5 mb-0"><span id="aiMessagesLeft" style="filter: blur(6px);">40000</span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4" data-aos="slide-left">
+                            <div class="card shadow border-left-warning py-2" style="border-left: 0.25rem solid rgb(255,150,255)!important;">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-warning font-weight-bold text-xs mb-1"><span style="color: rgb(198,62,246);">Server Level</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span id="serverLvl" style="filter: blur(6px);">40000</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-star fa-2x text-gray-300"></i></div>
                                     </div>
                                 </div>
                             </div>
@@ -99,8 +114,8 @@
                         <div class="col-lg-7 col-xl-8">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary font-weight-bold m-0">Earnings Overview</h6>
-                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                    <h6 class="text-primary font-weight-bold m-0">Main Settings</h6>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"></button>
                                         <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
                                             <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
                                             <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a>
@@ -108,7 +123,71 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="chart-area"><canvas data-bs-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:false,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                    <div class="row">
+                                        <div class="col" data-toggle="tooltip" data-bs-tooltip="" data-placement="bottom" style="max-width: 30%;padding: 1vh;" title="The prefix to which the bot responds to. Leaving this blank will result in the default prefix, daz."><div class="group" style="margin-bottom: 0px;">      
+    <input type="text" id="botPrefix" style="width: 100%;" required>
+    <span class="highlight" style="width: 100%;"></span>
+    <span class="bar" style="width: 100%;"></span>
+    <label>Bot Prefix</label>
+</div>
+
+
+</div>
+                                        <div class="col" data-toggle="tooltip" data-bs-tooltip="" data-placement="bottom" style="padding: 1vh;" title="1 = BETA | 0 = Normal. BETA mode allows you to use things before they officially come out. However, this could cause the bot to function unexpectedly"><div class="group" style="margin-bottom: 0px;">      
+    <input type="text" id="Smode" style="width: 20vh;" required>
+    <span class="highlight" style="width: 20vh;"></span>
+    <span class="bar" style="width: 20vh;"></span>
+    <label>Server Mode</label>
+</div>
+
+
+</div>
+                                        <div class="col"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="text-primary font-weight-bold m-0">Messages</h6>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="small font-weight-bold" style="font-size: 15px;"></h4>
+                                    <div data-toggle="tooltip" data-bs-tooltip="" data-placement="bottom" title="Sets the welcome message that users see in a channel. to set the channel, you must go to the respective channel (on the right) and press set as Welcome channel"><div class="group">      
+    <input type="text" id="welcomeMsg" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Welcome Message</label>
+</div>
+
+
+</div>
+                                    <div data-toggle="tooltip" data-bs-tooltip="" data-placement="bottom" title="Sets the welcome private message that users see in their DMs."><div class="group">      
+    <input type="text" id="dmMessage" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>DM Message on Join</label>
+</div>
+
+
+</div>
+                                    <div data-toggle="tooltip" data-bs-tooltip="" data-placement="bottom" title="Sets the goodbye message that users see in a channel. to set the channel, you must go to the respective channel (on the right) and press set as Goodbye channel"><div class="group">      
+    <input type="text" id="goodbyeMsg" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Goodbye Message</label>
+</div>
+
+
+</div>
+                                    <div data-toggle="tooltip" data-bs-tooltip="" title="Sets the level up message that users see in a channel. to set the channel, you must go to the respective channel (on the right) and press set as Levelup channel"><div class="group">      
+    <input type="text" id="levelupMsg"  required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Levelup Message</label>
+</div>
+
+
+</div><button class="btn btn-primary" onclick="$(&#39;#contactModal&#39;).modal(&#39;show&#39;);">Show Placeholders</button>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +195,7 @@
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center" style="border-width: -11px;">
                                     <h6 class="text-primary font-weight-bold m-0">Channels</h6>
-                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"></button>
                                         <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
                                             <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
                                             <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a>
@@ -130,9 +209,7 @@
                                                 <tr></tr>
                                             </thead>
                                             <tbody id="tbody">
-                                                <tr class="dummyDel">
-                                                    <td>LoremIpsumDoretIForgot</td>
-                                                </tr>
+                                                <tr class="dummyDel"></tr>
                                                 <tr class="dummyDel">
                                                     <td style="filter: blur(5px);">LoremIpsumDoretIForgot</td>
                                                 </tr>
@@ -198,46 +275,6 @@
                         <div class="col-lg-6 mb-4">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="text-primary font-weight-bold m-0">Messages</h6>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="small font-weight-bold" style="font-size: 15px;"></h4><div class="group">      
-    <input type="text" id="welcomeMsg" required>
-    <span class="highlight"></span>
-    <span class="bar"></span>
-    <label>Welcome Message</label>
-</div>
-
-
-<div class="group">      
-    <input type="text" id="dmMessage" required>
-    <span class="highlight"></span>
-    <span class="bar"></span>
-    <label>DM Message on Join</label>
-</div>
-
-
-<div class="group">      
-    <input type="text" id="goodbyeMsg" required>
-    <span class="highlight"></span>
-    <span class="bar"></span>
-    <label>Goodbye Message</label>
-</div>
-
-
-<div class="group">      
-    <input type="text" id="levelupMsg"  required>
-    <span class="highlight"></span>
-    <span class="bar"></span>
-    <label>Levelup Message</label>
-</div>
-
-
-<button class="btn btn-primary" onclick="$(&#39;#contactModal&#39;).modal(&#39;show&#39;);">Show Placeholders</button>
-                                </div>
-                            </div>
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
                                     <h6 class="text-primary font-weight-bold m-0">Permissions</h6>
                                 </div>
                                 <div style="padding: 25px;">
@@ -245,16 +282,107 @@
                                         <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-1">Everyone</a></li>
                                         <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-2">DJ</a></li>
                                         <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">Extra Role</a></li>
-                                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">Moderation</a></li>
-                                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">Extra Role 2</a></li>
-                                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">Administrator</a></li>
+                                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-4">Moderation</a></li>
+                                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-5">Extra Role 2</a></li>
+                                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-6">Administrator</a></li>
                                     </ul>
                                     <div class="tab-content">
-                                        <div class="tab-pane active" role="tabpanel" id="tab-1">
-                                            <p class="tabThing">Content for tab 1.</p>
+                                        <div class="tab-pane active text-dark" role="tabpanel" id="tab-1">
+                                            <div class="table-responsive" style="overflow-y: scroll;height: 25vh;">
+                                                <table class="table" style="overflow-y: 25vh;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 640px;font-size: 20px;">Permission Nodes</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody style="vertical-align: middle;overflow-y: scroll;"></tbody>
+                                                </table>
+                                            </div><span>Role:&nbsp;<select class="custom-select" style="border-radius: 18px;background: rgba(50,50,50,0.1);" disabled="" readonly="">
+                                                    <option value="">@everyone</option>
+                                                </select></span><span>Add Permission:&nbsp;<select class="custom-select" style="border-radius: 18px;background: rgba(50,50,50,0.1);"></select></span>
+                                        </div>
+                                        <div class="tab-pane text-dark" role="tabpanel" id="tab-2">
+                                            <div class="table-responsive" style="overflow-y: scroll;height: 25vh;">
+                                                <table class="table" style="overflow-y: 25vh;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 640px;font-size: 20px;">Permission Nodes</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody style="vertical-align: middle;overflow-y: scroll;"></tbody>
+                                                </table>
+                                            </div><span>Role:&nbsp;<select class="custom-select" style="border-radius: 18px;background: rgba(50,50,50,0.1);"></select></span><span>Add Permission:&nbsp;<select class="custom-select" style="border-radius: 18px;background: rgba(50,50,50,0.1);"></select></span>
+                                        </div>
+                                        <div class="tab-pane text-dark" role="tabpanel" id="tab-6">
+                                            <div class="table-responsive" style="overflow-y: scroll;height: 25vh;">
+                                                <table class="table" style="overflow-y: 25vh;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 640px;font-size: 20px;">Permission Nodes</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody style="vertical-align: middle;overflow-y: scroll;"></tbody>
+                                                </table>
+                                            </div><span>Role:&nbsp;<select class="custom-select" style="border-radius: 18px;background: rgba(50,50,50,0.1);"></select></span><span>Add Permission:&nbsp;<select class="custom-select" style="border-radius: 18px;background: rgba(50,50,50,0.1);"></select></span>
+                                        </div>
+                                        <div class="tab-pane text-dark" role="tabpanel" id="tab-5">
+                                            <div class="table-responsive" style="overflow-y: scroll;height: 25vh;">
+                                                <table class="table" style="overflow-y: 25vh;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 640px;font-size: 20px;">Permission Nodes</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody style="vertical-align: middle;overflow-y: scroll;"></tbody>
+                                                </table>
+                                            </div><span>Role:&nbsp;<select class="custom-select" style="border-radius: 18px;background: rgba(50,50,50,0.1);"></select></span><span>Add Permission:&nbsp;<select class="custom-select" style="border-radius: 18px;background: rgba(50,50,50,0.1);"></select></span>
+                                        </div>
+                                        <div class="tab-pane text-dark" role="tabpanel" id="tab-4">
+                                            <div class="table-responsive" style="overflow-y: scroll;height: 25vh;">
+                                                <table class="table" style="overflow-y: 25vh;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 640px;font-size: 20px;">Permission Nodes</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody style="vertical-align: middle;overflow-y: scroll;"></tbody>
+                                                </table>
+                                            </div><span>Role:&nbsp;<select class="custom-select" style="border-radius: 18px;background: rgba(50,50,50,0.1);"></select></span><span>Add Permission:&nbsp;<select class="custom-select" style="border-radius: 18px;background: rgba(50,50,50,0.1);"></select></span>
+                                        </div>
+                                        <div class="tab-pane text-dark" role="tabpanel" id="tab-3">
+                                            <div class="table-responsive" style="overflow-y: scroll;height: 25vh;">
+                                                <table class="table" style="overflow-y: 25vh;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 640px;font-size: 20px;">Permission Nodes</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody style="vertical-align: middle;overflow-y: scroll;"></tbody>
+                                                </table>
+                                            </div><span>Role:&nbsp;<select class="custom-select" style="border-radius: 18px;background: rgba(50,50,50,0.1);"></select></span><span>Add Permission:&nbsp;<select class="custom-select" style="border-radius: 18px;background: rgba(50,50,50,0.1);"></select></span>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center" style="border-width: -11px;">
+                                    <h6 class="text-primary font-weight-bold m-0">Control Panel</h6>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
+                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body"><button class="btn btn-success" id="save" type="button" style="max-width: 100%;width: 100%;">Save</button><button class="btn btn-danger" id="revert" type="button" style="max-width: 100%;width: 100%;margin-top: 2vh;">Revert</button></div>
                             </div>
                         </div>
                     </div>
@@ -266,7 +394,7 @@
                                 <h4 class="modal-title">Placeholders</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                             </div>
                             <div class="modal-body">
-                                <p>Dazai offers many placeholders to simplify the use of message events.(Note Caps matter)</p>
+                                <p>Dazai offers many placeholders to simplify the use of message events.(Note Caps matter)<br>Tip: if you would like to disable a message, replace it with&nbsp;<code>none</code>!</p>
                                 <div class="table-responsive" style="height: 50%;">
                                     <table class="table" style="position: fixed;">
                                         <thead>
@@ -310,13 +438,13 @@
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/chart.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="assets/js/darkmode.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="assets/js/loadGuild.js"></script>
     <script src="assets/js/profileLoader.js"></script>
+    <script src="assets/js/saveLoadHandler.js"></script>
     <script src="assets/js/theme.js"></script>
 </body>
 

@@ -27,7 +27,7 @@ body {
   line-height: 1.5;
   color: #9AA0AC;
   text-align: left;
-  background-color: #fff;
+  background-color: #373737;
   color: #a2a2a2;
 }
 
@@ -208,5 +208,13 @@ input {
 
 .tabThing {
   color: rgb(200,200,200);
+}
+
+.inherited {
+  color: rgb(80,80,80);
+}
+
+select {
+  background-color: rgba(0,0,0,0);
 }
 
