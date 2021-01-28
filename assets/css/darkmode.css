@@ -218,3 +218,11 @@ select {
   background-color: rgba(0,0,0,0);
 }
 
+.server-card-header {
+  color: rgb(207,207,207);
+}
+
+.server-card-body {
+  color: rgb(220,220,220);
+}
+
