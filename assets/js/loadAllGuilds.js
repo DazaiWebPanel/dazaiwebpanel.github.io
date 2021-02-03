@@ -44,7 +44,8 @@
 	resData = resData.filter(x => !!(1 << 35 & x.permissions) || x.owner || (nyadDataMap.get(x.id)));
 	document.getElementById("fakeCards").parentNode.removeChild(document.getElementById("fakeCards"));
 	resData.filter(x => nyadDataMap.get(x.id) && nyadDataMap.get(x.id).perms).forEach(element => {
-		document.getElementById("cardz").innerHTML += `<div class="card" style="width: 18rem;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 5px 5px 16px 2px rgba(0,0,0,0.25);margin: 14px;min-width: 280px;max-width: 300px;margin-bottom: 20px;">
+		element.name =element.name.replace(/\</g,"&lt;").replace(/\>/g,"&gt;");
+		document.getElementById("cardz").innerHTML += `<div class="card" style="width: 100%;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 5px 5px 16px 2px rgba(0,0,0,0.25);margin: 14px;min-width: 280px;max-width: 16.191709vw;margin-bottom: 20px;">
 		<div style="width: 100%;height: 200px;background: url(${element.icon ? `https://cdn.discordapp.com/icons/${element.id}/${element.icon}.png?size=256` : "https://dazai.app/assets/img/dazai-Xtrasmoll256.png"}) center / contain no-repeat;border-top-left-radius: 20px;border-top-right-radius: 20px;"></div>
 		<div class="card-body d-flex flex-column" style="height: 262px;">
 			<div>
@@ -58,7 +59,8 @@
 	// resData.map(x=>nyadDataMap.get(x.id)? console.log(nyadDataMap.get(x.id), nyadDataMap.get(x.id).perms):false);
 	resData.filter(x => nyadDataMap.get(x.id) && nyadDataMap.get(x.id).perms === false).forEach(element => {
 		// console.
-		document.getElementById("cardz").innerHTML += `<div class="card" style="width: 18rem;border-radius: 158px;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 5px 5px 16px 2px rgba(0,0,0,0.25);margin: 14px;min-width: 280px;max-width: 300px;margin-bottom: 20px;filter: brightness(28%);">
+		element.name =element.name.replace(/\</g,"&lt;").replace(/\>/g,"&gt;");
+		document.getElementById("cardz").innerHTML += `<div class="card" style="width: 100%;border-radius: 158px;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 5px 5px 16px 2px rgba(0,0,0,0.25);margin: 14px;min-width: 280px;max-width: 16.191709vw;margin-bottom: 20px;filter: brightness(28%);">
 <div style="width: 100%;height: 200px;background: url(${element.icon ? `https://cdn.discordapp.com/icons/${element.id}/${element.icon}.png?size=256` : "https://dazai.app/assets/img/dazai-Xtrasmoll256.png"}) center / contain no-repeat;border-top-left-radius: 20px;border-top-right-radius: 20px;"></div>
 <div class="card-body d-flex flex-column" style="height: 262px;">
 	<div>
@@ -70,7 +72,8 @@
 </div>`
 	});
 	resData.filter(x => !nyadDataMap.get(x.id)).forEach(element => {
-		document.getElementById("cardz").innerHTML += `<div class="card" style="width: 18rem;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 5px 5px 16px 2px rgba(0,0,0,0.25);margin: 14px;min-width: 280px;max-width: 300px;margin-bottom: 20px;">
+		element.name =element.name.replace(/\</g,"&lt;").replace(/\>/g,"&gt;");
+		document.getElementById("cardz").innerHTML += `<div class="card" style="width: 100%;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 5px 5px 16px 2px rgba(0,0,0,0.25);margin: 14px;min-width: 280px;max-width: 16.191709vw;margin-bottom: 20px;">
 		<div style="width: 100%;height: 200px;background: url(${element.icon ? `https://cdn.discordapp.com/icons/${element.id}/${element.icon}.png?size=256` : "https://dazai.app/assets/img/dazai-Xtrasmoll256.png"}) center / contain no-repeat;border-top-left-radius: 20px;border-top-right-radius: 20px;"></div>
 		<div class="card-body d-flex flex-column" style="height: 262px;">
 			<div>

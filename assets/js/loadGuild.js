@@ -290,9 +290,9 @@ async function loadPerms(json) {
     if (jsonData.gdata.leavemsg !== "none") {
       gmsg.value = jsonData.gdata.leavemsg;
     }
-    if (jsonData.gdata.levelmsgs !== "none") {
-      lmsg.value = jsonData.gdata.levelmsgs;
-    }
+    // if (jsonData.gdata.levelmsgs !== "none") {
+    //   lmsg.value = jsonData.gdata.levelmsgs;
+    // }
     if (jsonData.gdata.prefix) {
       document.getElementById("botPrefix").value = jsonData.gdata.prefix|| "daz";
     }

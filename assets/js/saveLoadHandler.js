@@ -57,7 +57,7 @@ save.addEventListener("click", async () => {
 		joinmsg: wmsg.value,
 		joindmmsg: dmsg.value,
 		leavemsg: gmsg.value,
-		levelmsgs: lmsg.value,
+		levelmsgs: lmsg.value || "none",
 		beta: parseInt(document.getElementById("Smode").value) < 2 && parseInt(document.getElementById("Smode").value) >= 0 ? parseInt(document.getElementById("Smode").value) : 0,
 		id: getJsonFromUrl(window.location.href).guild,
 		prefix: document.getElementById("botPrefix").value || "daz",

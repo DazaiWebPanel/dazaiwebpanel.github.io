@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Guild - Dazai Web Panel</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+2">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Federant">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/darkmode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="assets/css/lightmode.css">
+    <link rel="stylesheet" href="assets/css/popup.css">
+    <link rel="stylesheet" href="assets/css/tet.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switch-1.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switch.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon"><img style="width: 48px;height: 48px;" src="assets/img/DazaiIcon.png"></div>
+                    <div class="sidebar-brand-text mx-3"><span style="/*font-family: Ubuntu, sans-serif;*/">Dazai</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="nav navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="guilds.html"><i class="fa fa-user"></i><span>All Guilds/Servers</span></a></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html"><i class="fa fa-shopping-cart" style="/*color: rgba(208,0,0,0.3);*/"></i><span>Shop</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="settings.html"><i class="fa fa-gear"></i><span>Settings</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top" id="topnavbar" style="color: rgba(84,68,60,0.9);">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto navbar-search w-100">
+                                        <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
+                                            <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small" id="username"></span><img class="border rounded-circle img-profile" id="pfp"></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="/guilds.html"><i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Servers</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="/logout.html"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-1"></h3>
+                </div>
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0" id="channelName" style="font-family: Ubuntu, sans-serif;">Channel</h3>
+                    </div>
+                    <div class="row"></div>
+                    <div class="row">
+                        <div class="col-lg-5 col-xl-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center" style="border-width: -11px;">
+                                    <h6 class="text-primary font-weight-bold m-0">AI Moderation Settings</h6>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
+                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body" id="deblur" style="filter: blur(8px);"><span id="toxicity" class="aiMod" style="vertical-align: middle;"><input type="range" id="toxicityInput" max="100" min="0" style="padding-left: 1px;max-height: 9px;color: rgb(200,20,200)!important;background-color: rgb(200,20,200);"><span id="toxicityText">Toxicity ( 20 )</span>&nbsp;</span>
+                                    <div></div><span id="stoxicity" class="aiMod" style="vertical-align: middle;"><input type="range" id="severetoxicityInput" max="100" min="0" style="padding-left: 1px;max-height: 9px;color: rgb(200,20,200)!important;background-color: rgb(200,20,200);"><span id="severetoxicityText">Severe Toxicity ( 20 )</span>&nbsp;</span>
+                                    <div></div><span id="identity" class="aiMod" style="vertical-align: middle;"><input type="range" id="identityInput" max="100" min="0" style="padding-left: 1px;max-height: 9px;color: rgb(200,20,200)!important;background-color: rgb(200,20,200);"><span id="identityText">Identity Attack ( 20 )</span>&nbsp;</span>
+                                    <div></div><span id="insult" class="aiMod" style="vertical-align: middle;"><input type="range" id="insultInput" max="100" min="0" style="padding-left: 1px;max-height: 9px;color: rgb(200,20,200)!important;background-color: rgb(200,20,200);"><span id="insultText">Insult ( 20 )</span>&nbsp;</span><span id="profane" class="aiMod" style="vertical-align: middle;"><input type="range" id="profaneInput" max="100" min="0" style="padding-left: 1px;max-height: 9px;color: rgb(200,20,200)!important;background-color: rgb(200,20,200);"><span id="profaneText">Profanity ( 20 )</span>&nbsp;</span><span id="threats" class="aiMod" style="vertical-align: middle;"><input type="range" id="threatsInput" max="100" min="0" style="padding-left: 1px;max-height: 9px;color: rgb(200,20,200)!important;background-color: rgb(200,20,200);"><span id="threatsText">Threats ( 20 )</span>&nbsp;</span><span id="sexual" class="aiMod" style="vertical-align: middle;"><input type="range" id="sexualInput" max="100" min="0" style="padding-left: 1px;max-height: 9px;color: rgb(200,20,200)!important;background-color: rgb(200,20,200);"><span id="sexualText" e="">Sexual ( 20 )</span>&nbsp;</span>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center" style="border-width: -11px;">
+                                    <h6 class="text-primary font-weight-bold m-0">Control Panel</h6>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
+                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body"><button class="btn btn-success" id="save" type="button" style="max-width: 100%;width: 100%;">Save</button><button class="btn btn-danger" id="revert" type="button" style="max-width: 100%;width: 100%;margin-top: 2vh;">Revert</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 col-xl-4">
+                            <div class="card shadow mb-4" title="To enable Moderation on this channel, just drag any of the sliders to a value greater than 0. Conversely, dragging all the sliders to 0 effectively disables scanning in that channel. A higher value means you would like the bot to be more strict. WE DO NOT RECCOMEND SETTING ANYTHING HIGHER THAN 15.">
+                                <div class="card-header d-flex justify-content-between align-items-center" style="border-width: -11px;">
+                                    <h6 class="text-primary font-weight-bold m-0">AI Moderation notes</h6>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
+                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p>To enable Moderation on this channel, just drag any of the sliders to a value greater than 0. <br>Conversely, dragging all the sliders to 0 effectively disables scanning in that channel. A higher value means you would like the bot to be more strict. WE DO NOT RECOMMEND SETTING ANYTHING HIGHER THAN 15.<br>We also suggest having the bot be more lenient on the non-toxicity tags as those tend to be less accurate.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" role="dialog" tabindex="-1" id="contactModal" style="border-width: 0px;">
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="border-width: 0px;">
+                        <div class="modal-content" style="height: 50vh;">
+                            <div class="modal-header" style="border-width: 0px;">
+                                <h4 class="modal-title">Placeholders</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Dazai offers many placeholders to simplify the use of message events.(Note Caps matter)<br>Tip: if you would like to disable a message, replace it with&nbsp;<code>none</code>!</p>
+                                <div class="table-responsive" style="height: 50%;">
+                                    <table class="table" style="position: fixed;">
+                                        <thead>
+                                            <tr></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 10vh;"><code>{USERNAME}</code></td>
+                                                <td>The user's username</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>{MENTION}</code></td>
+                                                <td>Pinging the user</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>{ID}</code></td>
+                                                <td>The ID of the User</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>{OLDLVL}</code></td>
+                                                <td>The level the user just passed (Only for Levelup Message)</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>{NEWLVL}</code></td>
+                                                <td>The level the user just got to (Only for Levelup Message)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Tet 2021</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/channelHandler.js"></script>
+    <script src="assets/js/darkmode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/profileLoader.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
